@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <!-- Use JavaScript to preserve the original path, query, and hash -->
+    <script>
+        var newDomain = "oscarsthoughts.com";
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace("https://" + newDomain + path);
+    </script>
+    <!-- Fallback meta refresh if JS is disabled -->
+    <meta http-equiv="refresh" content="0; url=https://oscarsthoughts.com/">
+    <link rel="canonical" href="https://oscarsthoughts.com/">
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, please <a href="https://oscarsthoughts.com/">click here</a>.</p>
+</body>
+</html>

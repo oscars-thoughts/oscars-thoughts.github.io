@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <!-- Use JavaScript to preserve the original path, query, and hash -->
+    <script>
+        var newDomain = "oscarsthoughts.com";
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace("https://" + newDomain + path);
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            color: #333;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>This site has moved to <a id="redirect-link" href="https://oscarsthoughts.com/">https://oscarsthoughts.com/</a>.</p>
+    <p>If you are not redirected automatically, please click the link above.</p>
+    <script>
+        // Update the fallback link with the exact path just in case
+        document.getElementById('redirect-link').href = "https://" + newDomain + path;
+        document.getElementById('redirect-link').textContent = "https://" + newDomain + path;
+    </script>
+</body>
+</html>
